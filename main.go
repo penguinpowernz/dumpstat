@@ -91,7 +91,7 @@ func main() {
 			case csv:
 				fmt.Printf("%0.f,%s,%s,%s,%s,%s\n", m["Pid"], m["Name"], state, m["VmRSS"], m["VmHWM"], m["VmSwap"])
 			case ilp:
-				fmt.Printf("stat,name=\"%s\",state=%s rss=%s,rss_hwm=%s,swap=%s %d\n", m["Name"], state, m["VmRSS"], m["VmHWM"], m["VmSwap"], time.Now().Unix())
+				fmt.Printf("stat,name=\"%s\",state=%s rss=%si,rss_hwm=%si,swap=%si %d\n", m["Name"], state, m["VmRSS"], m["VmHWM"], m["VmSwap"], time.Now().Unix())
 			}
 		}(file)
 	}
